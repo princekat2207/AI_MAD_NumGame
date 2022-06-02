@@ -71,10 +71,53 @@ public class MainActivity extends AppCompatActivity {
 
     public void newMatch() {  //A game is composed of three matches
 
+       
         int operand1 = random.nextInt(10);
         int operand2=0;
         //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
         String operator = operators[random.nextInt(4)];
+        int correct_answer= 0;
+        if (operator.equals("+"))
+        {
+            correct_answer=operand1+operand2;
+        }
+        else if (operator.equals("-"))
+        {
+            correct_answer=operand1-operand2;
+        }
+        else if (operator.equals("/"))
+        {
+            correct_answer=operand1/operand2;
+        }
+        else
+        {
+            correct_answer=operand1*operand2;
+        }
+
+        if(correctButton==0){
+            button1.setText(correct_answer + " ");
+            button2.setText(correct_answer+1+" ");
+            button3.setText(correct_answer-1+" ");
+            button4.setText(correct_answer+2+" ");
+        }
+        if(correctButton==1){
+            button1.setText(correct_answer+2+ " ");
+            button2.setText(correct_answer+" ");
+            button3.setText(correct_answer+1+" ");
+            button4.setText(correct_answer-1+" ");
+        }
+        if(correctButton==2){
+            button1.setText(correct_answer+2+ " ");
+            button2.setText(correct_answer+1+" ");
+            button3.setText(correct_answer+" ");
+            button4.setText(correct_answer-1+" ");
+        }
+        if(correctButton==3){
+            button1.setText(correct_answer+3+" ");
+            button2.setText(correct_answer+1+" ");
+            button3.setText(correct_answer-1+" ");
+            button4.setText(correct_answer+" ");
+        }
         textView2.setText(operand1 + operator + operand2);
 
       // Your code here, to diplay correct and incorrect options on the buttons
@@ -115,6 +158,6 @@ public class MainActivity extends AppCompatActivity {
     public String getInterpretation(int [][]dataFrame,double slope){
        //provide interpretation based on your slope analysis
         // Your code here
-        return "Your Interpretation";
+       
     }
 }
