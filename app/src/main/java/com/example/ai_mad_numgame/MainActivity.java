@@ -1,3 +1,5 @@
+//This code is contributed by Prince Katare 201b197
+
 package com.example.ai_mad_numgame;
 /*
    App will show your last performance at the start of the activity. New Tournament will start from
